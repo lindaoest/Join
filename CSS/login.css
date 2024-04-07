@@ -1,0 +1,195 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 67px 122px 63px 77px;
+}
+.login-header img {
+    margin-top: 13px;
+}
+.button-login-top a,
+.button-login-mobile a {
+    text-decoration: none;
+    gap: 35px;
+}
+#content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+.login-lightbox {
+    max-width: 652px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    padding: 48px 0;
+    margin: 0 16px;
+}
+#heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    line-height: 72px;
+    border-bottom: 3px solid #29ABE2;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+#input-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+    flex-direction: column;
+    width: 422px;
+}
+.input-email-container,
+.input-password-container {
+    position: relative;
+    width: 100%;
+}
+#input-email,
+#input-password {
+    height: 44px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    font-size: 20px;
+    text-indent: 20px;
+}
+.input-email-image,
+.input-password-image {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+}
+#checkbox-div {
+    gap: 8px;
+    margin-top: 16px;
+    width: 422px;
+}
+#buttons-container {
+    gap: 35px;
+    margin-top: 32px;
+}
+.button {
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #2A3647;
+}
+a {
+    text-decoration: none;
+}
+.button1  {
+    background-color: #2A3647;
+    color: #FFFFFF;
+}
+.button2 {
+    background-color: #ffffff;
+    color: #000000;
+}
+#error-info {
+    margin-top: 32px;
+    color: red;
+    width: 422px;
+}
+.button-login-mobile {
+    display: none;
+}
+.privacy-policy {
+    gap: 24px;
+    color: #A8A8A8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 80px 0 32px 0;
+}
+#overlay-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: 10;
+    opacity: 1;
+    animation-name: overlaybox;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.3s;
+}
+#overlay-logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(1.5) translate(-50%, -50%);
+    animation-name: overlaylogo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes overlaylogo {
+    from {
+        transform: scale(1.5) translate(-50%, -50%);
+    }
+    to {
+        transform: scale(1);
+        top: 80px;
+        left: 77px;
+    }
+}
+
+@keyframes overlaybox {
+    to {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .login-header {
+        padding: 40px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login-header img {
+        width: 64px;
+    }
+    #input-container,
+    #checkbox-div,
+    #error-info {
+        width: calc(100% - 32px);
+    }
+    #buttons-container {
+        flex-direction: column;
+        gap: 21px;
+    }
+    .button-login-top {
+        display: none;
+    }
+    .button-login-mobile {
+        display: flex;
+        margin-top: 57px;
+    }
+    #content {
+        margin-bottom: 40px;
+    }
+    .button-login-mobile {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

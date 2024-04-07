@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+a{
+color: rgb(113, 113, 113);
+
+}
+.signUp-page {
+    overflow: hidden;
+    min-height: 100vh;
+}
+.login-header {
+    padding: 67px 122px 63px 77px;
+}
+.button-login-top {
+    display: flex;
+    gap: 35px;
+}
+#content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+.login-lightbox {
+    max-width: 652px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    padding: 48px 0;
+    margin: 0 16px;
+}
+#heading-container {
+    position: relative;
+    line-height: 72px;
+    border-bottom: 3px solid #29ABE2;
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+.vector {
+    position: absolute;
+    top: 0;
+    left: -71%;
+}
+.vector img {
+    height: 20.74px;
+    width: 21.33px;
+}
+#input-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+    flex-direction: column;
+    width: 422px;
+}
+.input-name-container,
+.input-email-container,
+.input-password-container,
+.input-confirm-container {
+    position: relative;
+    width: 100%;
+}
+#input-name,
+#input-email,
+#input-password,
+#input-confirm {
+    height: 44px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    font-size: 20px;
+    text-indent: 20px;
+}
+.input-name-image,
+.input-email-image,
+.input-password-image,
+.input-confirm-image {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translateY(-50%);
+}
+#checkbox-div {
+    gap: 8px;
+    margin-top: 36px;
+    width: 422px;
+}
+#buttons-container {
+    gap: 35px;
+    margin-top: 32px;
+}
+.button {
+    padding: 15px 24px;
+    border-radius: 8px;
+    font-size: 21px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.button1 {
+    background-color: #2A3647;
+    color: #FFFFFF;
+}
+.privacy-policy {
+    gap: 24px;
+    color: #A8A8A8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 80px 0 32px 0;
+}
+#error-password,
+#error-privacy {
+    color: red;
+}
+#error-password {
+    width: 100%;
+}
+#error-privacy {
+    width: 422px;
+}
+.success-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgb(0, 0, 0, 0.4);
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+.success {
+    height: 100%;
+    transform: translateY(100%);
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.success button {
+    display: flex;
+    padding: 15px 24px;
+    border-radius: 8px;
+    background-color: #2A3647;
+    color: white;
+    height: 48px;
+    line-height: 10px;
+    font-size: 21px;
+}
+
+@media screen and (max-width: 700px) {
+    .login-header {
+        padding: 40px;
+        align-items: center;
+    }
+    .vector {
+        top: 2%;
+        left: -40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #content {
+        margin-bottom: 40px;
+    }
+    .vector {
+        top: 8%;
+        left: -26%;
+    }
+    .login-header img {
+        width: 64px;
+    }
+    #input-container,
+    #checkbox-div,
+    #error-info,
+    #error-privacy {
+        width: calc(100% - 32px);
+    }
+    #buttons-container {
+        flex-direction: column;
+        gap: 21px;
+    }
+    .button-login-top {
+        display: none;
+    }
+    .button-login-mobile {
+        display: flex;
+        margin-top: 57px;
+    }
+}
+
+@media screen and (max-width: 412px) {
+    .vector {
+        left: -15%;
+    }
+}

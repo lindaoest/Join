@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./CSS/default.css">
+    <link rel="stylesheet" href="./CSS/login.css">
+</head>
+
+<body onload="init()">
+    <div class="login-header">
+        <img src="./img/start_logo.svg" alt="logo">
+        <div class="button-login-top">
+            <a href="./sign_up.html" class="flex align-center">
+                <p>Not a Join user?</p>
+                <button class="button button1">Sign Up</button>
+            </a>
+        </div>
+    </div>
+    <form id="content" onsubmit="login(); return false">
+        <div class="login-lightbox flex-column align-center justify-center">
+            <div id="heading-container">
+                <h1>Log in</h1>
+            </div>
+            <div id="input-container">
+                <div class="input-email-container flex">
+                    <input id="input-email" type="email" placeholder="Email" required>
+                    <img class="input-email-image" src="./img/mail.png" alt="Mail">
+                </div>
+                <div class="input-password-container flex">
+                    <input id="input-password" type="password" minlength="8" placeholder="Password" required>
+                    <img class="input-password-image" src="./img/lock.png" alt="Password">
+                </div>
+            </div>
+            <div id="error-info"></div>
+            <div id="checkbox-div" class="flex align-center">
+                <input id="input-checkbox" type="checkbox">
+                    <p>Remember me</p>
+            </div>
+            <div id="buttons-container" class="flex space-between justify-center">
+                <button type="submit" class="button button1 sign-up-button">Log in</button>
+                <a href="./summary.html" onclick="guestLogin()" formnovalidate>
+                    <div class="button button2 guest-login-button">Guest Log in</div>
+                </a>
+            </div>
+        </div>
+    </form>
+    <div class="button-login-mobile justify-center">
+        <a href="./sign_up.html" class="flex align-center">
+            <p>Not a Join user?</p>
+            <button class="button button1">Sign Up</button>
+        </a>
+    </div>
+    <div class="privacy-policy flex justify-center">
+        <a href="./Privacy_unlogged.html">Privacy Policy</a>
+        <a href="./legal_notice_unlogged.html">Legal Notice</a>
+    </div>
+    <div id="overlay-logo" class="flex justify-center align-center">
+		<img id="overlay-logo-img" src="./img/start_logo.svg" alt="logo">
+	</div>
+    <script src="./js/loading.JS"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

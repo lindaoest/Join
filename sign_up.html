@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./CSS/default.css">
+    <link rel="stylesheet" href="./CSS/sign_up.css">
+</head>
+
+<body onload="init()">
+    <div class="signUp-page">
+        <div class="login-header">
+            <img src="./img/start_logo.svg" alt="logo">
+        </div>
+        <form id="content" onsubmit="signUp(); return false">
+            <div class="login-lightbox flex-column align-center justify-center">
+                <div id="heading-container" class="flex">
+                    <a href="./index.html" class="vector"><img src="./img/vector.png"></a>
+                    <h1>Sign up</h1>
+                </div>
+                <div id="input-container">
+                    <div class="input-name-container flex">
+                        <input id="input-name" type="text" placeholder="Name" required>
+                        <img class="input-name-image" src="./img/person-signup.svg" alt="Name">
+                    </div>
+                    <div class="input-email-container flex">
+                        <input id="input-email" type="email" placeholder="Email" required>
+                        <img class="input-email-image" src="./img/mail.png" alt="Mail">
+                    </div>
+                    <div class="input-password-container flex">
+                        <input id="input-password" type="password" minlength="8" placeholder="Password" required>
+                        <img class="input-password-image" src="./img/lock.png" alt="Password">
+                    </div>
+                    <div class="input-confirm-container flex">
+                        <input id="input-confirm" type="password" minlength="8" placeholder="Confirm Password" required>
+                        <img class="input-confirm-image" src="./img/lock.png" alt="Confirm">
+                    </div>
+                    <div id="error-password"></div>
+                </div>
+                <div id="checkbox-div" class="flex algin-center">
+                    <input id="input-checkbox" type="checkbox">
+                    <p>I accept the <a href="./Privacy.html">Privacy policy</a></p>
+                </div>
+                <div id="error-privacy"></div>
+                <div id="buttons-container" class="flex space-between justify-center">
+                    <button class="button button1 sign-up-button">Sign up</button>
+                </div>
+            </div>
+        </form>
+        <div class="privacy-policy flex justify-center">
+            <a href="./Privacy.html">Privacy Policy</a>
+            <a href="./legal_notice.html">Legal Notice</a>
+        </div>
+        <div id="success-lightbox" class="success-lightbox flex align-center justify-center">
+            <div id="success" class="success">
+                <button>You Signed Up successfully</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/loading.JS"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

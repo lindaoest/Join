@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board</title>
+    <link rel="stylesheet" href="./CSS/default.css">
+    <link rel="stylesheet" href="./CSS/board.css">
+    <link rel="stylesheet" href="./CSS/add_tasks.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/sidebar.css">
+</head>
+<body onload="renderBoard(), renderTemplates()">
+    <div id="header"></div>
+    <div id="header-mobile" class="d-none"></div>
+    <div id="sidebar"></div>
+    <div id="sidebar-mobile"></div>
+    <div class="main-board">
+        <div id="add-task-popup" class="add-task-popup"></div>
+        <div id="overview-container" class="task-big-view-overlay">
+            <div id="task-big-view-edit-card"></div>
+            <div id="task-big-view-card" onclick="closeMoveTaskTo()"></div>
+        </div>
+        <div class="board-top">
+            <h1 class="board-title">Board</h1>
+            <div class="board-top-right">
+                <input class="input-board-top" placeholder="Find Task" type="text">
+                <button id="add-task-btn" onclick="openAddTaskPopup('to-do')">Add task <img src="./img/add.png"></button>
+            </div>
+        </div>
+        <div class="board-container">
+            <div class="board-column ">
+                <div class="board-column-title">
+                    <p>To do</p>
+                    <img src="./img/plus-button.png" onclick="openAddTaskPopup()">
+                </div>
+                <div id="to-do" class="drag-area" ondrop="moveTo('to-do')" ondragleave="removeHighlight('to-do')" ondragover="allowDrop(event); highlight('to-do')">
+                </div>
+            </div>
+            <div class="board-column">
+                <div class="board-column-title">
+                    <p>In progress</p>
+                    <img src="./img/plus-button.png" onclick="openAddTaskPopup('in-progress')">
+                </div>
+                <div id="in-progress" class="drag-area" ondrop="moveTo('in-progress')" ondragleave="removeHighlight('in-progress')" ondragover="allowDrop(event); highlight('in-progress')">
+                </div>
+            </div>
+            <div class="board-column">
+                <div class="board-column-title">
+                    <p>Await feedback</p>
+                    <img src="./img/plus-button.png" onclick="openAddTaskPopup('await-feedback')">
+                </div>
+                <div id="await-feedback" class="drag-area" ondrop="moveTo('await-feedback')" ondragleave="removeHighlight('await-feedback')" ondragover="allowDrop(event); highlight('await-feedback')"></div>
+            </div>
+            <div class="board-column">
+                <div class="board-column-title">
+                    <p>Done</p>
+                </div>
+                <div id="done-tasks" class="drag-area" ondrop="moveTo('done-tasks')" ondragleave="removeHighlight('done-tasks')" ondragover="allowDrop(event); highlight('done-tasks')">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/loading.JS"></script>
+    <script src="./templates/loadTemplates.js"></script>
+    <script src="./templates/header-template.js"></script>
+    <script src="./templates/sidebar-template.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/add_task.js"></script>
+    <script src="./templates/board-html-template.js"></script>
+    <script src="./js/active-page.js"></script>
+
+</body>
+</html>

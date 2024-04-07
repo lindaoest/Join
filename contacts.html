@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./CSS/contacts.css">
+    <link rel="stylesheet" href="./CSS/sidebar.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+</head>
+<body onload=" loadContacts(),renderContactsMobile(), renderTemplates()">
+    <div id="header"></div>
+	<div id="sidebar"></div>
+    <div id="sidebar-mobile"></div>
+    <div id="editing-overlay" class="d-none"></div>
+    <div id="editing-overlay-mobile" class="d-none"></div>
+    <div id="container-right-mobile" class="d-none"></div>
+    <div id="maincontainer">
+        <div id="animation-box"></div>
+        <div id="contactlist-mobile"></div>
+        <div id="container-left">
+            <div id="contact-btn-div">
+                <button id="contact-btn" onclick="setNewContact()">Add new contact <img src="./img/person_add.png"></button>
+            </div>
+            <div id="contactlist">
+                <div id="alphabet-tab"></div>
+            </div>
+        </div>
+        <div id="container-right">
+            <div id="top-content-container-right">
+                <div id="heading-div-static">Contacts</div>
+                <div id="text-div-static">Better with a team</div>
+            </div>
+            <div id="container-right-content"></div>
+        </div>
+    </div>
+<script src="./js/loading.JS"></script>
+<script src="./templates/loadTemplates.js"></script>
+<script src="./templates/header-template.js"></script>
+<script src="./templates/sidebar-template.js"></script>
+<script src="./js/contacts.js"></script>
+<script src="./js/script.js"></script>
+<script src="./templates/contacts-template.js"></script>
+<script src="./js/active-page.js"></script>
+</body>
+</html>

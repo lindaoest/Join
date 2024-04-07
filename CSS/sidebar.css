@@ -1,0 +1,124 @@
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    width: 232px;
+    background-color: #2A3647;
+    height: 100vh;
+}
+
+#sidebar a {
+    text-decoration: none;
+}
+
+.logo-sidebar {
+    height: 120px;
+    width: 100px;
+    margin-top: 64px;
+}
+
+.side-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 114px;
+}
+
+.navi {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    gap: 8px;
+    padding: 8px 0 8px 56px;
+}
+
+.navi:hover {
+    background-color: #091931;
+}
+
+#sidebar .active {
+    background-color: #091931;
+}
+
+.privacy-text {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    height: 317px;
+    margin-top: auto;
+    margin-bottom: 64px;
+}
+
+.info-text {
+    color: #A8A8A8;
+    padding-left: 56px;
+}
+
+#sidebar-mobile {
+    display: none;
+}
+
+@media screen and (max-height: 900px) {
+    .logo-sidebar {
+        margin-top: 24px;
+    }
+    .side-menu {
+        margin-top: 56px;
+    }
+    .privacy-text {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #sidebar-mobile {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        height: 80px;
+        background-color: #2A3647;
+        align-items: space-between;
+        flex-direction: row;
+        left: 0;
+        right: 0;
+        z-index: 777;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    .menu-mobile {
+        width: 100%;
+        gap: 25px;
+    }
+
+    #sidebar-mobile .navi {
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        text-decoration: none;
+        padding: 0;
+        gap: 4px;
+        width: 80px;
+    }
+}
+
+@media (max-width:450px) {
+    .navi {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+.menu-mobile {
+    gap: 8px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JOIN summary</title>
+
+	<link rel="stylesheet" href="./CSS/default.css">
+	<link rel="stylesheet" href="./CSS/header.css">
+	<link rel="stylesheet" href="./CSS/sidebar.css">
+	<link rel="stylesheet" href="./CSS/summary.css">
+</head>
+
+<body onload=" renderSummary(), renderTemplates()">
+	<div id="header"></div>
+	<div id="sidebar"></div>
+	<div id="sidebar-mobile"></div>
+	<div id="main-container">
+		<div id="heading-container" class="flex align-center">
+			<div id="heading-summary">
+				<p>Join 360</p>
+			</div>
+			<div id="text-summary">
+				<p>Key Metrics at a Glace</p>
+				<img id="vec5" src="./img/vector5vertical.png">
+			</div>
+		</div>
+		<div class="main-box flex">
+			<div class="box-left flex-column">
+				<div class="box-top">
+					<div class="box todo">
+						<img class="box-top-image" src="./img/edit.svg" alt="Edit">
+						<div class="inner-box-text">
+							<h2 id="to-do">0</h2>
+							<p>To-do</p>
+						</div>
+					</div>
+					<div class="box done">
+						<img class="box-top-image" src="./img/done.svg" alt="Done">
+						<div class="inner-box-text">
+							<h2 id="done">0</h2>
+							<p>Done</p>
+						</div>
+					</div>
+				</div>
+				<div class="box-middle">
+					<div class="box urgent" id="urgent-box">
+						<div class="inner-box-left">
+							<img class="box-top-image" src="./img/urgent.png" alt="Urgent">
+							<div id="inner-box-urgent" class="flex-column justify-center">
+								<h2 id="urgent-heading" class="flex align-center justify-center">0</h2>
+								<p id="urgent-text">Urgent</p>
+							</div>
+						</div>
+						<div class="inner-box-right">
+							<div class="inner-box-text">
+								<h2 id="urgent-date" class="heading-date">October 16, 2022</h2>
+								<p>Upcoming Deadline</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box-bottom">
+					<div class="box-small tasks-in-board">
+						<h2 id="tasks-in-board">0</h2>
+						<p>Tasks in Board</p>
+					</div>
+					<div class="box-small tasks-in-progress">
+						<h2 id="task-in-progress">0</h2>
+						<p>Tasks in Progress</p>
+					</div>
+					<div class="box-small awaiting-feedback">
+						<h2 id="awaiting-feedback">0</h2>
+						<p>Awaiting Feedback</p>
+					</div>
+				</div>
+			</div>
+			<div class="box-right flex-column justify-center">
+				<p id="greeting" class="greeting"></p>
+				<span id="loged-in-person" class="loged-in-person"></span>
+			</div>
+		</div>
+	</div>
+	<div id="overlay-greeting-mobile" class="flex-column align-center justify-center">
+		<p id="greeting-mobile" class="greeting"></p>
+		<span id="loged-in-person-mobile" class="loged-in-person"></span>
+	</div>
+	<script src="./js/loading.JS"></script>
+	<script src="./templates/loadTemplates.js"></script>
+	<script src="./templates/header-template.js"></script>
+	<script src="./templates/sidebar-template.js"></script>
+	<script src="./js/active-page.js"></script>
+	<script src="./js/summary.js"></script>
+</body>
+</html>
